@@ -58,7 +58,7 @@ header {
 .logo {
   @media screen and (min-width: 1200px) {
     position: absolute;
-    left: 0px;
+    left: -70px;
     top: 37px;
   }
 }
@@ -67,6 +67,8 @@ header {
   display: flex;
   margin-top: 40px;
   padding: 12px 36px;
+  text-align: start;
+  align-items: center;
   border: none;
   border-radius: 20px;
   color: var(--title-text-color);
@@ -78,6 +80,17 @@ header {
 
   @media screen and (min-width: 768px) {
   }
+
+  &:hover,
+  :focus {
+    background-color: var(--button-hover-secondary);
+  }
+}
+
+.icon-buy {
+  width: 4px;
+  height: 8px;
+  margin-left: 12px;
 }
 
 .menu_button {
@@ -162,7 +175,7 @@ header {
   @media screen and (min-width: 1200px) {
     position: relative;
 
-    left: 64px;
+    left: 0px;
     top: 176px;
   }
 }
@@ -186,15 +199,26 @@ header {
     display: flex;
   }
 
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    left: -38px;
+    bottom: -44px;
+  }
+
+  // .headline-bottom-secondary {
+  //   margin-right: 100px;
+  // }
+
   & .img-milk {
     @media screen and (max-width: 1199px) {
       margin-top: 18px;
     }
 
     @media screen and (min-width: 1200px) {
-      position: relative;
-      left: -36px;
-      top: 44px;
+      // position: relative;
+      // left: -36px;
+      // top: 44px;
+      margin-top: 56px;
     }
   }
 
@@ -213,7 +237,7 @@ header {
       width: 200px;
       height: 78px;
       margin-top: 112px;
-      margin-left: 30px;
+      // margin-left: 30px;
     }
   }
 }
@@ -236,7 +260,7 @@ header {
 
   @media screen and (min-width: 1200px) {
     margin-top: 20px;
-    margin-left: 30px;
+    // margin-left: 30px;
     width: 26px;
     height: 26px;
   }
@@ -250,6 +274,16 @@ header {
   @media screen and (max-width: 767px) {
     display: none;
   }
+
+  @media screen and (min-width: 1200px) {
+    right: 115px;
+    bottom: 0px;
+  }
+}
+.points-list {
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
 
 .points-item-qty {
@@ -268,10 +302,10 @@ header {
   }
 
   &::before {
-    // position: absolute;
-    // z-index: 554;
-    right: -18px;
-    bottom: 100px;
+    position: relative;
+    right: -160px;
+    bottom: -16px;
+    z-index: 1;
 
     content: '';
     display: block;
@@ -283,6 +317,9 @@ header {
     @media screen and (min-width: 1200px) {
       width: 30px;
       height: 30px;
+
+      right: -278px;
+      bottom: -25px;
     }
   }
 }
@@ -314,7 +351,7 @@ header {
     }
 
     @media screen and (min-width: 1200px) {
-      left: 594px;
+      left: 555px;
       top: 108px;
     }
   }
@@ -338,7 +375,7 @@ header {
     }
 
     @media screen and (min-width: 1200px) {
-      left: 475px;
+      left: 426px;
       top: 52px;
 
       width: 538px;
