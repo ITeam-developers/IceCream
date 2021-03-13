@@ -1,0 +1,105 @@
+.container {
+  width: 320px;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.customer-reviews-img {
+}
+
+.customer-reviews-wrapper-p {
+  position: relative;
+
+  padding-top: 42px;
+  padding-bottom: 20px;
+  padding-left: 62px;
+  padding-right: 62px;
+  background-color: #fafafa;
+  min-width: 280px;
+  @media screen and (min-width: 768px) {
+    min-width: 620px;
+    height: 164px;
+  }
+}
+
+.customer-reviews-review {
+  font-family: DM Sans;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 255%;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-image: repeating-linear-gradient(
+    to top,
+    #e1e1e1,
+    #e1e1e1 1px,
+    #fafafa 1px,
+    #fafafa 31px
+  );
+}
+
+.customer-reviews-wrapper-p::before {
+  position: absolute;
+  top: 28px;
+  left: 60px;
+  display: block;
+  content: '';
+  width: 54px;
+  height: 40px;
+  background-image: url(../images/client-images/comma.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.customer-data {
+  position: relative;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 186%;
+  text-align: center;
+  color: #000000;
+  margin-top: 52px;
+}
+
+.customer-data::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: -12px;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 20px;
+
+  fill: #c7133e;
+
+  background-image: url(../images/client-images/Ellipse-8.svg),
+    url(../images/client-images/Ellipse-8.svg),
+    url(../images/client-images/Ellipse-8.svg);
+
+  background-size: 4px, 4px, 4px;
+  background-repeat: no-repeat;
+  background-position: bottom 12px left 10px, bottom 12px left 20px,
+    bottom 12px left 30px;
+}
+
+.customer-reviews-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.customer-reviews-item:not(:last-child) {
+  margin-right: 18px;
+}
