@@ -72,6 +72,7 @@ header {
   border: none;
   border-radius: 20px;
   color: var(--title-text-color);
+
   @include font(16px, bold, 21px);
 
   @media screen and (max-width: 767px) {
@@ -88,9 +89,10 @@ header {
 }
 
 .icon-buy {
-  width: 4px;
-  height: 8px;
+  width: 8px;
+  height: 12px;
   margin-left: 12px;
+  fill: var(--title-text-color);
 }
 
 .menu_button {
@@ -264,6 +266,10 @@ header {
     width: 26px;
     height: 26px;
   }
+}
+
+.icon-hero {
+  fill: var(--title-text-color);
 }
 
 .box-right {
