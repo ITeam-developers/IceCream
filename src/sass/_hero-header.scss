@@ -1,8 +1,16 @@
+header {
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    z-index: 1000;
+  }
+}
+
 .header-hero {
   background-color: var(--ice-cream-color);
 
-  @media screen and (max-width: 480px) {
-    height: 100vh;
+  @media screen and (max-width: 767px) {
+    // height: 100vh;
+    height: 502px;
   }
 }
 
@@ -34,23 +42,23 @@
   }
 
   @media screen and (min-width: 1200px) {
-    position: absolute;
+    // position: absolute;
     display: flex;
-
-    align-items: baseline;
-    justify-content: end;
+    align-items: end;
+    justify-content: space-between;
   }
-
-  //   height: 60px;
 }
 
 .logo-header {
   @media screen and (min-width: 768px) {
     padding-top: 38px;
   }
+}
 
+.logo {
   @media screen and (min-width: 1200px) {
-    left: 46px;
+    position: absolute;
+    left: 0px;
     top: 37px;
   }
 }
@@ -99,10 +107,15 @@
 .nav_list {
   display: flex;
   margin-top: 52px;
+  margin-left: 110px;
 
   @media screen and (max-width: 1199px) {
     display: none;
   }
+
+  // @media screen and (min-width: 1200px) {
+  //   position: relative;
+  // }
 
   & .nav_item {
     @include font(16px, 700, 21px);
@@ -145,12 +158,24 @@
     left: 0px;
     top: 176px;
   }
+
+  @media screen and (min-width: 1200px) {
+    position: relative;
+
+    left: 64px;
+    top: 176px;
+  }
 }
 
 .headline {
   position: absolute;
   left: 0px;
   bottom: -118px;
+
+  @media screen and (min-width: 1200px) {
+    left: 0px;
+    bottom: -323px;
+  }
 }
 
 .headline-bottom {
@@ -162,7 +187,15 @@
   }
 
   & .img-milk {
-    margin-top: 18px;
+    @media screen and (max-width: 1199px) {
+      margin-top: 18px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      position: relative;
+      left: -36px;
+      top: 44px;
+    }
   }
 
   & .headline-bottom-title {
@@ -177,6 +210,10 @@
 
     @media screen and (min-width: 1200px) {
       @include font(14px, 400, 20px);
+      width: 200px;
+      height: 78px;
+      margin-top: 112px;
+      margin-left: 30px;
     }
   }
 }
@@ -192,6 +229,17 @@
   border-radius: 50%;
 
   background-position: center;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .box-right {
@@ -205,8 +253,11 @@
 }
 
 .points-item-qty {
-  position: absolute;
-  z-index: 555;
+  // position: absolute;
+  // z-index: 555;
+
+  margin-top: 12px;
+  text-align: end;
 
   font-family: var(--primary-font);
   @include font(28px, 400, 32px);
@@ -219,18 +270,26 @@
   &::before {
     // position: absolute;
     // z-index: 554;
+    right: -18px;
+    bottom: 100px;
+
     content: '';
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background-color: white;
+
+    @media screen and (min-width: 1200px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
 .points-item {
   text-align: right;
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
   @include font(8px, 400, 10px);
   color: var(--secondary-text-color);
 
@@ -255,7 +314,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-      left: 270px;
+      left: 594px;
       top: 108px;
     }
   }
@@ -279,7 +338,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-      left: 185px;
+      left: 475px;
       top: 52px;
 
       width: 538px;
