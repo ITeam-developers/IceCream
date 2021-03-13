@@ -86,7 +86,7 @@
 .photo {
   width: 100%;
   @media screen and (min-width: 768px) {
-    margin-top: 50px;
+    margin-top: 55px;
   }
 }
 .right-side {
@@ -173,7 +173,13 @@
 }
 .btn-block {
   display: flex;
+  margin-top: 17px;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
+
 .about-btn {
   font-weight: 700;
   font-size: 16px;
@@ -182,12 +188,12 @@
   width: 176px;
   height: 44px;
   border-radius: 22px;
-  margin-top: 17px;
+  padding: 15px 35px;
+  margin-right: 14px;
   background-color: #ffffff;
   color: #d41443;
 }
+
 .about-icon {
-  width: 10px;
-  height: 12px;
   fill: #d41443;
 }
