@@ -1,0 +1,101 @@
+.contacts {
+    background-color: var(--secondary-background-color);
+}
+
+.contacts-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   margin: 0 auto;
+}
+.icon-vector {
+    width: 8px;
+    height: 8px;
+    margin-left: 8px;
+  
+
+}
+.locations,
+.franchise {
+    margin: 0 auto;
+    width: 160px;
+    height: 44px;
+    border-radius: 22px;
+    padding: 20px 16px ;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    // background-color: tomato;
+}
+.locations {
+    margin-bottom: 20px;
+    @include font(16px, 700, 21px);
+    color: var(--secondary-text-color);
+    background-color: var(--title-text-color);
+}
+.franchise {
+  
+    @include font(16px, 700, 21px);
+    color: var(--title-text-color);
+    background-color: var( --primary-background-color);
+}
+
+.contacts-cards {
+    display: block;
+    width: 100%;
+    padding: 20px;
+
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+}
+
+.contacts-cards+.contacts-cards {
+    margin-top: 20px;
+}
+
+
+
+.title-cards {
+    display: inline-block;
+    padding: 0 30px;
+    @include font(12px, 500, 22px);
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+.cafe {
+    background-color: var(--ice-coffee-color);
+}
+.food-truck {
+    background-color: var(--milkshakes-color);
+}
+
+
+
+
+@media screen and (min-width: 320px) {
+    .container {
+        width: 320px;
+      
+    }
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+        padding: 0 34px;
+      
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+        padding: 0 114px;
+      
+    }
+}
