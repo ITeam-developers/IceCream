@@ -21,7 +21,8 @@
   padding: 0px 20px;
 
   @media screen and (min-width: 768px) {
-    min-width: 768px;
+    width: 768px;
+    // min-width: 768px;
     padding: 0 74px;
   }
 
@@ -40,7 +41,6 @@
 .customer-reviews-wrapper-p {
   position: relative;
   margin: 0 auto;
-  width: 926%;
   padding-top: 42px;
   padding-bottom: 26px;
   padding-left: 62px;
