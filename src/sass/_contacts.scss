@@ -15,6 +15,11 @@
   
 
 }
+.contacts-list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
 .locations,
 .franchise {
     margin: 0 auto;
@@ -44,7 +49,7 @@
     display: block;
     width: 100%;
     padding: 20px;
-
+    @include font(12px, 500, 22px);
     background-color: var(--primary-background-color);
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
@@ -54,12 +59,10 @@
     margin-top: 20px;
 }
 
-
-
 .title-cards {
     display: inline-block;
     padding: 0 30px;
-    @include font(12px, 500, 22px);
+    
     color: var(--secondary-text-color);
     text-transform: uppercase;
     border-radius: 4px;
@@ -70,14 +73,24 @@
 .food-truck {
     background-color: var(--milkshakes-color);
 }
+.contacts-city,
+.products-opening-day {   
+    color: var(--dark-text-color);
+}
 
+.products-text,
+.contacts-adress {   
+    color: var(--gray-text-color);
+}
+.products-opening-hours {
+    color: var(--product-text-color);
+}
 
 
 
 @media screen and (min-width: 320px) {
     .container {
-        width: 320px;
-      
+        width: 320px;     
     }
 
 }
@@ -89,13 +102,35 @@
         padding: 0 34px;
       
     }
+
+    .contacts-buttons {
+        
+        flex-direction: row;
+        width: 100%;
+       margin: 0 auto;
+    }
+
+    .contacts-list {
+        flex-direction: row;
+    }
+
+    .contacts-cards+.contacts-cards {
+        margin-top: 0;
+        margin-left: 20px;
+    }
 }
+
 
 
 @media screen and (min-width: 1200px) {
     .container {
         width: 1200px;
-        padding: 0 114px;
-      
+        padding: 0 114px;     
+    }
+
+
+    .contacts-cards+.contacts-cards {
+        margin-top: 0;
+        margin-left: 30px;
     }
 }
