@@ -3,8 +3,15 @@
   padding-bottom: 86px;
   background-color: var(--primary-background-color);
 
+  @media screen and (min-width: 768px) {
+    padding-top: 119px;
+    padding-bottom: 119px;
+  }
+
   @media screen and (min-width: 1200px) {
     background-color: var(--secondary-background-color);
+    padding-top: 122px;
+    padding-bottom: 132px;
   }
 }
 
@@ -14,14 +21,15 @@
   padding: 0px 20px;
 
   @media screen and (min-width: 768px) {
-    width: 768px;
+    min-width: 768px;
     padding: 0 74px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
-    padding-left: 178px;
-    padding-right: 176px;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -31,7 +39,8 @@
 
 .customer-reviews-wrapper-p {
   position: relative;
-
+  margin: 0 auto;
+  width: 926%;
   padding-top: 42px;
   padding-bottom: 26px;
   padding-left: 62px;
@@ -41,17 +50,17 @@
   margin-top: 29px;
 
   @media screen and (min-width: 768px) {
-    min-width: 620px;
+    width: 620px;
     padding-top: 30px;
     padding-bottom: 28px;
-    padding-left: 38px;
-    padding-right: 38px;
+    padding-left: 42px;
+    padding-right: 42px;
     background-color: var(--primary-background-color);
     margin-top: 19px;
   }
 
   @media screen and (min-width: 1200px) {
-    min-width: 926px;
+    width: 926px;
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 52px;
@@ -61,6 +70,8 @@
 }
 
 .customer-reviews-review {
+  position: relative;
+  z-index: 1;
   font-family: DM Sans;
   font-weight: 500;
   font-style: normal;
@@ -69,23 +80,24 @@
   text-align: center;
   padding-right: 15px;
   padding-left: 15px;
+  color: var(--dark-text-color);
   background-image: repeating-linear-gradient(
     to top,
     #e1e1e1,
     #e1e1e1 1px,
-    #fafafa 1px,
-    #fafafa 31px
+    rgba(0, 0, 0, 0) 1px,
+    rgba(0, 0, 0, 0) 31px
   );
 
   @media screen and (min-width: 768px) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 44px;
     background-image: repeating-linear-gradient(
       to top,
       #e1e1e1,
       #e1e1e1 1px,
-      var(--primary-background-color) 1px,
-      var(--primary-background-color) 31px
+      rgba(0, 0, 0, 0) 1px,
+      rgba(0, 0, 0, 0) 31px
     );
     font-size: 14px;
     line-height: 216%;
@@ -93,7 +105,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    width: 100%;
+    width: 822px;
     padding-left: 30px;
     padding-right: 30px;
     font-size: 16px;
@@ -103,8 +115,9 @@
 
 .customer-reviews-wrapper-p::before {
   position: absolute;
-  top: 28px;
-  left: 60px;
+  z-index: 0;
+  top: 24px;
+  left: 66px;
   display: block;
   content: '';
   width: 54px;
@@ -115,11 +128,11 @@
   background-position: 50% 50%;
 
   @media screen and (min-width: 768px) {
-    top: 12px;
-    left: 42px;
+    top: 10px;
+    left: 28px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     top: 15px;
     left: 52px;
   }
@@ -137,10 +150,12 @@
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
+    margin-top: 42px;
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 20px;
+    margin-top: 34px;
   }
 }
 
@@ -172,14 +187,19 @@
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-}
-.customer-reviews-item:not(:last-child) {
-  margin-right: 18px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 35px;
+  }
 }
 
 .customer-reviews-item {
   height: 12px;
   width: 12px;
+
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
 }
 
 .customer-reviews-link-radius {
