@@ -1,3 +1,4 @@
+// Header
 header {
   @media screen and (min-width: 1200px) {
     position: relative;
@@ -146,9 +147,10 @@ header {
     display: none;
   }
 
-  // @media screen and (min-width: 1200px) {
-  //   position: relative;
-  // }
+  & .nav_link:hover,
+  :focus {
+    color: var(---title-text-color);
+  }
 
   & .nav_link.current {
     color: var(--title-text-color);
@@ -157,29 +159,26 @@ header {
   & .nav_item {
     @include font(16px, 700, 21px);
     color: var(--secondary-text-color);
+    transition: (--time-animation);
 
     &:not(:last-child) {
       margin-right: 35px;
     }
+
+    &:hover,
+    :focus {
+      color: var(--button-hover-primary);
+    }
   }
 }
 
-// hero
+// Hero-container
 
 .hero {
   justify-content: space-between;
 }
 
-// .headline-bottom {
-//   @media screen and (min-width: 768px) {
-//   }
-// }
-
-// .headline-bottom-secondary {
-//   @media screen and (max-width: 767px) {
-//     display: none;
-//   }
-// }
+// Box-left
 
 .box-left {
   position: absolute;
@@ -229,19 +228,12 @@ header {
     bottom: -44px;
   }
 
-  // .headline-bottom-secondary {
-  //   margin-right: 100px;
-  // }
-
   & .img-milk {
     @media screen and (max-width: 1199px) {
       margin-top: 18px;
     }
 
     @media screen and (min-width: 1200px) {
-      // position: relative;
-      // left: -36px;
-      // top: 44px;
       margin-top: 56px;
     }
   }
@@ -303,6 +295,8 @@ header {
   fill: var(--title-text-color);
 }
 
+// Box-right
+
 .box-right {
   position: absolute;
   margin-top: 74px;
@@ -317,6 +311,7 @@ header {
     bottom: 0px;
   }
 }
+
 .points-list {
   position: relative;
   top: -60px;
@@ -324,9 +319,6 @@ header {
 }
 
 .points-item-qty {
-  // position: absolute;
-  // z-index: 555;
-
   margin-top: 12px;
   text-align: end;
 
@@ -419,9 +411,9 @@ header {
   }
 }
 
-.box-center {
-  //   position: relative;
+// Box-center
 
+.box-center {
   & .hero-icecream {
     position: absolute;
 
@@ -439,6 +431,7 @@ header {
       top: 108px;
     }
   }
+
   &::before {
     position: absolute;
 
@@ -564,7 +557,6 @@ header {
 
   top: 0;
   right: 0;
-  // drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
   box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
   background-color: var(--mobile-menu-bg);
 
