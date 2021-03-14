@@ -352,9 +352,9 @@ header {
 
   &::before {
     position: absolute;
-
-    right: 0px;
-    bottom: 26px;
+    z-index: -1;
+    right: -7px;
+    bottom: 29px;
 
     content: '';
     display: block;
@@ -386,9 +386,10 @@ header {
 
   &::before {
     position: absolute;
+    z-index: -1;
 
-    right: 0px;
-    bottom: 26px;
+    right: -7px;
+    bottom: 29px;
 
     content: '';
     display: block;
@@ -559,7 +560,7 @@ header {
   height: 100vh;
   // padding: 60px 22px;
 
-  transform: translateX(110%);
+  transform: translateX(120%);
 
   top: 0;
   right: 0;
