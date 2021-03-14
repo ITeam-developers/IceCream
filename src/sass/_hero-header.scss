@@ -75,7 +75,7 @@ header {
   text-align: start;
   align-items: center;
   border: none;
-  border-radius: 20px;
+  border-radius: 22px;
   color: var(--title-text-color);
 
   @include font(16px, bold, 21px);
@@ -94,9 +94,9 @@ header {
 }
 
 .icon-buy {
-  width: 8px;
-  height: 12px;
-  margin-left: 12px;
+  // width: 15px;
+  // height: 12px;
+  // margin-left: 12px;
   fill: var(--title-text-color);
 }
 
@@ -126,7 +126,7 @@ header {
 
 .nav_list {
   display: flex;
-  margin-top: 52px;
+  margin-top: 16px;
   margin-left: 110px;
 
   @media screen and (max-width: 1199px) {
@@ -136,6 +136,10 @@ header {
   // @media screen and (min-width: 1200px) {
   //   position: relative;
   // }
+
+  & .nav_link.current {
+    color: var(--title-text-color);
+  }
 
   & .nav_item {
     @include font(16px, 700, 21px);
@@ -491,6 +495,16 @@ header {
   right: 0;
   background-color: var(--mobile-menu-bg);
 
+  transition: var(--time-animation);
+
+  @media screen and (min-width: 768px) {
+    padding: 60px 34px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+
   &.is-open {
     transform: translateX(0%);
   }
@@ -505,8 +519,9 @@ header {
   padding: 12px 36px;
   text-align: center;
   align-items: center;
+  justify-content: center;
   border: none;
-  border-radius: 20px;
+  border-radius: 22px;
   color: var(--title-text-color);
 
   @include font(16px, bold, 21px);
@@ -541,10 +556,14 @@ header {
 
 .mobile-nav_list {
   margin-top: 20px;
+
+  & .mobile-nav_link.current {
+    color: var(--title-text-color);
+  }
 }
 
-.mobile-nav_item {
-}
+// .mobile-nav_item {
+// }
 
 .mobile-nav_link {
   padding: 12px 0px;
