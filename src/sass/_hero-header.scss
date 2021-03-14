@@ -72,11 +72,16 @@ header {
   display: flex;
   // margin-top: 40px;
   padding: 12px 36px;
+
   text-align: start;
   align-items: baseline;
+
   border: none;
   border-radius: 22px;
+  cursor: pointer;
   color: var(--title-text-color);
+
+  transition: var(--time-animation);
 
   @include font(16px, bold, 21px);
 
@@ -109,8 +114,16 @@ header {
   padding: auto;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   background-position: center;
+
+  transition: var(--time-animation);
+
+  &:hover,
+  :focus.icon-menu {
+    fill: black;
+  }
 
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -263,7 +276,16 @@ header {
   border: none;
   border-radius: 50%;
 
+  cursor: pointer;
+
   background-position: center;
+
+  transition: var(--time-animation);
+
+  &:hover,
+  :focus {
+    background-color: var(--button-hover-secondary);
+  }
 
   @media screen and (min-width: 768px) {
     margin-top: 8px;
@@ -490,6 +512,7 @@ header {
 
     color: var(--secondary-text-color);
     background-color: var(--title-text-color);
+    transition: var(--time-animation);
 
     &:hover,
     :focus {
@@ -511,6 +534,7 @@ header {
     color: var(--title-text-color);
 
     background-color: var(--primary-background-color);
+    transition: var(--time-animation);
 
     &:hover,
     :focus {
@@ -539,6 +563,8 @@ header {
 
   top: 0;
   right: 0;
+  // drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
+  box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
   background-color: var(--mobile-menu-bg);
 
   transition: var(--time-animation);
@@ -568,11 +594,15 @@ header {
   padding: 12px 36px;
 
   text-align: center;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
+
+  cursor: pointer;
+
   border: none;
   border-radius: 22px;
   color: var(--title-text-color);
+  transition: var(--time-animation);
 
   @include font(16px, bold, 21px);
 
