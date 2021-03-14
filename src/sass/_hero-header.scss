@@ -563,6 +563,8 @@ header {
 
   top: 0;
   right: 0;
+  // drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
+  box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
   background-color: var(--mobile-menu-bg);
 
   transition: var(--time-animation);
