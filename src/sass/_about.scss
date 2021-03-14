@@ -90,12 +90,11 @@
 .right-side {
   display: block;
   @media screen and (min-width: 768px) {
-    margin-top: 106px;
-    //margin-right: 17px;
+    margin-top: 100px;
   }
 }
 .text-first {
-  //font-family: DM Sans;
+  font-family: DM Sans;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
@@ -175,8 +174,17 @@
     margin-left: 74px;
   }
 }
+.paragraph {
+  margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    //margin-top: 35px;
+  }
+}
 .btn-block {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: baseline;
   margin-top: 17px;
 
   @media screen and (min-width: 768px) {
@@ -185,6 +193,7 @@
   }
   @media screen and (min-width: 1200px) {
     margin-left: 74px;
+    margin-top: 45px;
   }
 }
 
@@ -196,12 +205,17 @@
   width: 176px;
   height: 44px;
   border-radius: 22px;
-  padding: 15px 35px;
-  margin-right: 14px;
+  padding: 12px 35px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+ // margin-right: 17px;
   background-color: #ffffff;
   color: #d41443;
+  
 }
 
 .about-icon {
   fill: #d41443;
+  width: 14px;
 }
