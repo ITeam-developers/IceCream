@@ -3,11 +3,16 @@
     padding: 50px 0;
 }
 
-.contacts-buttons {
-    display: flex;
+.contacts-buttons-list {
+    
+    display: inline-flex;
     flex-direction: column;
     width: 100%;
-   margin: 0 auto;
+//    margin: 0 auto;
+    //  margin-top: 54px;
+}
+.contacts-buttons-item+.contacts-buttons-item {
+    margin-top: 10px;
 }
 .icon-vector {
     width: 8px;
@@ -16,7 +21,15 @@
   
 
 }
+
+.contacts-container {
+    position: relative;
+    padding-bottom: 1340px;
+}
+
 .contacts-list {
+    position: absolute;
+    top: -140px;
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -34,7 +47,6 @@
     // background-color: tomato;
 }
 .locations {
-    margin-bottom: 20px;
     @include font(16px, 700, 21px);
     color: var(--secondary-text-color);
     background-color: var(--title-text-color);
@@ -49,7 +61,7 @@
 .contacts-cards {
     display: block;
     width: 100%;
-    padding: 20px;
+    padding: 44px 20px;
     @include font(12px, 500, 22px);
     background-color: var(--primary-background-color);
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -62,6 +74,7 @@
 
 .title-cards {
     display: inline-block;
+    margin-bottom: 26px;
     padding: 0 30px;
     
     color: var(--secondary-text-color);
@@ -75,16 +88,60 @@
     background-color: var(--milkshakes-color);
 }
 .contacts-city,
-.products-opening-day {   
+.contacts-opening-day {   
     color: var(--dark-text-color);
 }
+.contacts-city {
+    margin-bottom: 12px;
+}
 
-.products-text,
-.contacts-adress {   
+.contacts-text,
+.contacts-adress-item {   
     color: var(--gray-text-color);
 }
+.contacts-text {
+    margin-bottom: 25px;
+}
+
 .products-opening-hours {
     color: var(--product-text-color);
+}
+.contacts-schedule {
+    position: relative;
+    display: block;
+    padding: 25px 0;
+    // border-top: solid 1px var(--gray-text-color);
+    // border-bottom: solid 1px var(--gray-text-color);
+}
+.contacts-schedule::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 1px;
+    width: 100%;
+    
+    background: var(--gray-text-color);
+
+}
+
+.contacts-schedule::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: 1px;
+    width: 100%;
+    
+    background: var(--gray-text-color);
+
+}
+
+.contacts-schedule-item+.contacts-schedule-item {
+    margin-top: 20px;
+}
+.contacts-adress-list {
+    margin-top: 25px;
 }
 
 
@@ -103,12 +160,26 @@
         padding: 0 34px;
       
     }
+    .contacts-container {
+        padding-bottom: 500px;
+    }
 
-    .contacts-buttons {
+    .contacts-cards {
+        
+        padding: 50px 30px;
+    }
+
+    .contacts-buttons-list {
         
         flex-direction: row;
         width: 100%;
-       margin: 0 auto;
+        // margin-top: 81px;
+        justify-content: center;
+    }
+
+    .contacts-buttons-item+.contacts-buttons-item {
+        margin-top: 0;
+        margin-left: 20px;
     }
 
     .contacts-list {
@@ -119,6 +190,33 @@
         margin-top: 0;
         margin-left: 20px;
     }
+
+
+    .title-cards {
+        @include font(16px, 500, 30px);
+        padding: 0 16px;
+
+    }
+
+    .contacts-city,
+    .contacts-opening-day {   
+        @include font(14px, 500, 22px);
+    }
+
+    .contacts-text {
+        margin-bottom: 30px;
+    }
+
+    .contacts-schedule {
+       
+        padding: 30px 0;        
+    }
+    .contacts-schedule-item+.contacts-schedule-item {
+        margin-top: 30px;
+    }
+    .contacts-adress-list {
+        margin-top: 30px;
+    }
 }
 
 
@@ -128,10 +226,61 @@
         width: 1200px;
         padding: 0 114px;     
     }
+    .overlay {
+        height: 500px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        background-image:
+                            url(../images/backcround-images/ellipse-desktop.png);
+    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .overlay {
+      background-image:
+       url(../images/backcround-images/ellipse-desktop@2x.png);
+      }
+    }
+
 
 
     .contacts-cards+.contacts-cards {
         margin-top: 0;
         margin-left: 30px;
     }
+
+    .contacts-cards {
+        
+        padding: 52px 44px;
+    }
+
+    .contacts-text {
+        margin-bottom: 32px;
+    }
+
+    .contacts-schedule {
+       
+        padding: 32px 0;        
+    }
+    .contacts-schedule-item+.contacts-schedule-item {
+        margin-top: 32px;
+    }
+    .contacts-adress-list {
+        margin-top: 32px;
+    }
+
+    // .contacts-buttons-list {
+
+    //     margin-top: 84px;
+    // }
+   
+
 }
