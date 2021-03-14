@@ -1,8 +1,8 @@
 .about {
-  background-color: #fff5f6;
+  background-color: var(--secondary-background-color);
   padding-top: 244px;
   padding-bottom: 39px;
-  @media screen and (min-width: 320px) {
+  @media screen and (min-width: 320px) { 
     background-repeat: no-repeat;
     background-position: bottom;
     background-image: url('../images/backcround-images/milkbg-mobail.png');
@@ -37,7 +37,7 @@
   line-height: 1.167;
   text-align: center;
   text-transform: uppercase;
-  color: #ffa5ba;
+  color: var(--product-text-color);
   margin-bottom: 15px;
   @media screen and (min-width: 768px) {
     font-size: 26px;
@@ -56,7 +56,7 @@
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #d41443;
+  color: var(--title-text-color);
   margin-bottom: 25px;
   //padding: 0px 60px;
   @media screen and (min-width: 768px) {
@@ -99,7 +99,7 @@
   font-size: 12px;
   line-height: 1.62;
   letter-spacing: 0.04em;
-  color: #000000;
+  color: var(--dark-text-color);
   min-width: 220px;
   padding: 0px 44px;
   margin-top: 45px;
@@ -123,9 +123,9 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
-  color: #907e82;
+  color: var(--gray-text-color);
   padding: 0px 44px;
-  margin-top: 40px;
+  margin-top: 30px;
   min-width: 220px;
   // background-size: cover;
 
@@ -162,7 +162,7 @@
     font-size: 14px;
     line-height: 1.76;
     letter-spacing: 0.04em;
-    color: #907e82;
+
     max-width: 410px;
     margin-left: 17px;
     padding: 0px;
@@ -185,7 +185,7 @@
   align-items: center;
   justify-content: center;
   align-items: baseline;
-  margin-top: 17px;
+  margin-top: 15px;
 
   @media screen and (min-width: 768px) {
     display: block;
@@ -199,23 +199,37 @@
 
 .about-btn {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1.302;
+  font-size: 14px;
+  line-height: 1.286;
   border: none;
-  width: 176px;
+  width: 175px;
   height: 44px;
   border-radius: 22px;
-  padding: 12px 35px;
+  padding: 12px 40px;
   display: flex;
   text-align: center;
   justify-content: space-between;
  // margin-right: 17px;
-  background-color: #ffffff;
-  color: #d41443;
-  
+  background-color: var(--secondary-text-color);
+  color: var(--title-text-color);
+  transition: background-color var(--time-animation), color var(--time-animation);
+  &:hover,
+  &:focus {
+   background-color: var(--button-hover-primary);
+   color: var(--secondary-text-color);
+  }
+  &:hover .about-icon,
+  &:focus .about-icon {
+    fill: var(--secondary-text-color);
+  }
+  @media screen and (min-width: 768px) {
+    padding: 10px 32px;
+    font-size: 16px;
+    line-height: 1.302;
+  }
 }
-
 .about-icon {
-  fill: #d41443;
+  fill: var(--title-text-color);
   width: 14px;
+  transition: fill var(--time-animation);
 }
