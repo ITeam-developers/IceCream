@@ -9,7 +9,7 @@
 @import './mixin';
 @import './body';
 @import './container';
-@import "./visually-hidden";
+@import './visually-hidden';
 
 //SECTIONS
 @import './hero-header';
@@ -20,6 +20,7 @@
 @import './customer-reviews';
 @import './contacts';
 @import './footer';
+@import './modal';
 
 // Стили для файла с примером HTML-фрагмента
 @import './example';
