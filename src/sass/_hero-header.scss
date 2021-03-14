@@ -9,8 +9,8 @@ header {
   background-color: var(--ice-cream-color);
 
   @media screen and (max-width: 767px) {
-    // height: 100vh;
-    height: 502px;
+    height: 100vh;
+    max-height: 502px;
   }
 }
 
@@ -35,10 +35,15 @@ header {
 
   z-index: 999;
 
+  @media screen and (max-width: 767px) {
+    padding-top: 6px;
+  }
+
   @media screen and (min-width: 768px) {
     // align-items: baseline;
     // justify-content: end;
     // text-align: center;
+    padding-top: 36px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -51,7 +56,7 @@ header {
 
 .logo-header {
   @media screen and (min-width: 768px) {
-    padding-top: 38px;
+    // padding-top: 38px;
   }
 }
 
@@ -65,7 +70,7 @@ header {
 
 .btn-buy {
   display: flex;
-  margin-top: 40px;
+  // margin-top: 40px;
   padding: 12px 36px;
   text-align: start;
   align-items: center;
@@ -111,7 +116,7 @@ header {
     position: absolute;
     z-index: 999;
     left: 524px;
-    top: 52px;
+    top: 48px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -374,7 +379,7 @@ header {
     background-color: var(--product-text-color);
 
     @media screen and (min-width: 768px) {
-      left: 307px;
+      left: 299px;
       top: 31px;
       width: 324px;
       height: 322px;
@@ -470,4 +475,79 @@ header {
       @include font(14px, 400, 18px);
     }
   }
+}
+
+.mobile-menu {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  max-width: 254px;
+  height: 100vh;
+  padding: 60px 22px;
+
+  transform: translateX(100%);
+
+  top: 0;
+  right: 0;
+  background-color: var(--mobile-menu-bg);
+
+  &.is-open {
+    transform: translateX(0%);
+  }
+}
+
+.mobile-btn-buy {
+  display: flex;
+
+  width: 209px;
+  height: 44px;
+
+  padding: 12px 36px;
+  text-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  color: var(--title-text-color);
+
+  @include font(16px, bold, 21px);
+
+  @media screen and (min-width: 768px) {
+    width: 186px;
+    height: 44px;
+  }
+
+  &:hover,
+  :focus {
+    background-color: var(--button-hover-secondary);
+  }
+}
+
+.btn_close {
+  position: absolute;
+  right: 24px;
+  top: 14px;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  background-position: center;
+}
+
+.icon-close {
+  fill: var(--primary-background-color);
+}
+
+.mobile-nav_list {
+  margin-top: 20px;
+}
+
+.mobile-nav_item {
+}
+
+.mobile-nav_link {
+  padding: 12px 0px;
+  @include font(14px, 700, 18px);
+  color: var(--primary-background-color);
 }
