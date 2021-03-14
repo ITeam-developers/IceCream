@@ -315,12 +315,20 @@ header {
   @media screen and (min-width: 1200px) {
     @include font(46px, 400, 53px);
   }
+}
+
+.first-list {
+  position: absolute;
+  z-index: 100;
+
+  right: 0px;
+  bottom: 100px;
 
   &::before {
-    position: relative;
-    right: -160px;
-    bottom: -16px;
+    position: absolute;
     z-index: 1;
+    right: -8px;
+    bottom: 25px;
 
     content: '';
     display: block;
