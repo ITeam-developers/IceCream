@@ -1,25 +1,27 @@
 .contacts {
     background-color: var(--secondary-background-color);
-    padding: 50px 0;
+    padding: 50px 0 112px 0;
 }
 
-.contacts-buttons-list {
-    
+
+.contacts-buttons-list {   
     display: inline-flex;
     flex-direction: column;
     width: 100%;
-//    margin: 0 auto;
-    //  margin-top: 54px;
 }
+
 .contacts-buttons-item+.contacts-buttons-item {
     margin-top: 10px;
 }
-.icon-vector {
-    width: 8px;
-    height: 8px;
-    margin-left: 8px;
-  
 
+.icon-vector {
+    width: 12px;
+    height: 12px;
+    margin-left: 6px;
+    fill: var(--secondary-text-color);
+}
+.franchise .icon-vector {
+    fill: var(--title-text-color);
 }
 
 .contacts-container {
@@ -44,18 +46,30 @@
     display: flex;
     text-align: center;
     align-items: center;
-    // background-color: tomato;
 }
+
 .locations {
     @include font(16px, 700, 21px);
+    justify-content: center;
     color: var(--secondary-text-color);
     background-color: var(--title-text-color);
 }
+
+.locations:hover,
+.locations:focus {
+    background-color: var(--button-hover-primary);
+}
+
 .franchise {
-  
     @include font(16px, 700, 21px);
     color: var(--title-text-color);
     background-color: var( --primary-background-color);
+    justify-content: center;
+}
+
+.franchise:hover,
+.franchise:focus {
+    background-color: var(--button-hover-secondary);
 }
 
 .contacts-cards {
@@ -81,12 +95,15 @@
     text-transform: uppercase;
     border-radius: 4px;
 }
+
 .cafe {
     background-color: var(--ice-coffee-color);
 }
+
 .food-truck {
     background-color: var(--milkshakes-color);
 }
+
 .contacts-city,
 .contacts-opening-day {   
     color: var(--dark-text-color);
@@ -96,7 +113,7 @@
 }
 
 .contacts-text,
-.contacts-adress-item {   
+.contacts-address-item {   
     color: var(--gray-text-color);
 }
 .contacts-text {
@@ -110,8 +127,6 @@
     position: relative;
     display: block;
     padding: 25px 0;
-    // border-top: solid 1px var(--gray-text-color);
-    // border-bottom: solid 1px var(--gray-text-color);
 }
 .contacts-schedule::before {
     position: absolute;
@@ -140,7 +155,7 @@
 .contacts-schedule-item+.contacts-schedule-item {
     margin-top: 20px;
 }
-.contacts-adress-list {
+.contacts-address-list {
     margin-top: 25px;
 }
 
@@ -159,6 +174,11 @@
         width: 768px;
         padding: 0 34px;
       
+    }
+
+    .contacts {
+       
+        padding: 50px 0 158px 0;
     }
     .contacts-container {
         padding-bottom: 500px;
@@ -184,6 +204,7 @@
 
     .contacts-list {
         flex-direction: row;
+        top: -130px;
     }
 
     .contacts-cards+.contacts-cards {
@@ -214,7 +235,7 @@
     .contacts-schedule-item+.contacts-schedule-item {
         margin-top: 30px;
     }
-    .contacts-adress-list {
+    .contacts-address-list {
         margin-top: 30px;
     }
 }
@@ -225,6 +246,10 @@
     .container {
         width: 1200px;
         padding: 0 114px;     
+    }
+    .contacts {
+       
+        padding: 50px 0 165px 0;
     }
     .overlay {
         height: 500px;
@@ -257,8 +282,7 @@
         margin-left: 30px;
     }
 
-    .contacts-cards {
-        
+    .contacts-cards {       
         padding: 52px 44px;
     }
 
@@ -273,14 +297,9 @@
     .contacts-schedule-item+.contacts-schedule-item {
         margin-top: 32px;
     }
-    .contacts-adress-list {
+    .contacts-address-list {
         margin-top: 32px;
     }
-
-    // .contacts-buttons-list {
-
-    //     margin-top: 84px;
-    // }
    
 
 }
