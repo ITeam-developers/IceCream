@@ -227,6 +227,7 @@
 
     .contacts-text {
         margin-bottom: 30px;
+        @include font(14px, 500, 23px);
     }
 
     .contacts-schedule {
@@ -238,6 +239,10 @@
     }
     .contacts-address-list {
         margin-top: 30px;
+    }
+
+    .contacts-address-item {   
+        @include font(14px, 500, 26px);
     }
 }
 
@@ -289,6 +294,7 @@
 
     .contacts-text {
         margin-bottom: 32px;
+        @include font(16px, 500, 29px);
     }
 
     .contacts-schedule {
