@@ -20,6 +20,11 @@ header {
   overflow: hidden;
 
   height: 100vh;
+
+  @media screen and (max-width: 767px) {
+    max-height: 502px;
+  }
+
   @media screen and (min-width: 768px) {
     height: 399px;
   }
@@ -121,10 +126,14 @@ header {
 
   transition: var(--time-animation);
 
-  &:hover,
-  :focus.icon-menu {
-    fill: black;
+  & .icon-burger{
+    fill: var(--title-text-color);
   }
+
+  // &:hover,
+  // :focus.icon-menu {
+  //   fill: black;
+  // }
 
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -622,10 +631,16 @@ header {
   background-color: transparent;
 
   background-position: center;
+  cursor: pointer;
 }
 
 .icon-close {
   fill: var(--primary-background-color);
+
+  .modal-close:hover &,
+  .modal-close:focus & {
+    fill: var(--button-hover-primary);
+  }
 }
 
 .mobile-nav_list {
