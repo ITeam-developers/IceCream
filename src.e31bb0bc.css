@@ -392,7 +392,6 @@ body {
   width: 100%;
   margin: 0px auto;
   padding: 0px 20px;
-  outline: 1px solid red;
 }
 
 .visually-hidden {
@@ -1245,7 +1244,7 @@ body {
 }
 .about {
   background-color: var(--secondary-background-color);
-  padding-top: 244px;
+  padding-top: 130px;
   padding-bottom: 39px;
 }
 @media screen and (min-width: 320px) {
@@ -1256,7 +1255,7 @@ body {
   }
 }
 @media screen and (min-width: 320px) and (min-device-pixel-ratio: 2), screen and (min-width: 320px) and (min-resolution: 192 dpi), screen and (min-width: 320px) and (min-resolution: 2px) {
-  .about .about {
+  .about .text-second {
     background-image: url("/milkbg-mobail@2x.3df148a7.png");
   }
 }
@@ -1267,7 +1266,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .about {
-    background-color: #ffffff;
+    background-color: var(--primary-background-color);
     background-repeat: no-repeat;
     background-position: bottom;
     background-image: url("/milkbg-desktop.7ddba2e6.png");
@@ -1368,7 +1367,6 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
-  letter-spacing: 0.04em;
   color: var(--dark-text-color);
   min-width: 220px;
   padding: 0px 44px;
@@ -1394,6 +1392,7 @@ body {
 }
 
 .text-second {
+  font-family: DM Sans;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
@@ -1404,7 +1403,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .text-second {
-    background-image: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.76;
@@ -1425,15 +1423,13 @@ body {
 
 .paragraph {
   margin-top: 20px;
-  background-image: none;
 }
 
 .btn-block {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-items: baseline;
-  margin-top: 15px;
+  margin-top: 17px;
 }
 @media screen and (min-width: 768px) {
   .btn-block {
@@ -1444,7 +1440,7 @@ body {
 @media screen and (min-width: 1200px) {
   .btn-block {
     margin-left: 74px;
-    margin-top: 45px;
+    margin-top: 35px;
   }
 }
 
@@ -1456,10 +1452,11 @@ body {
   width: 175px;
   height: 44px;
   border-radius: 22px;
-  padding: 12px 40px;
+  padding: 12px 30px;
   display: flex;
-  text-align: center;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
   background-color: var(--secondary-text-color);
   color: var(--title-text-color);
   transition: background-color var(--time-animation), color var(--time-animation);
@@ -1481,7 +1478,7 @@ body {
 
 .about-icon {
   fill: var(--title-text-color);
-  width: 14px;
+  width: 12px;
   transition: fill var(--time-animation);
 }
 
