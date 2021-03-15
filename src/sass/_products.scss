@@ -36,7 +36,9 @@
 }
 .products-title {
     text-align: center;
-    font-family: var(--primary-font)
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
     
 }
 .natural {
@@ -46,9 +48,8 @@
     margin-bottom: 15px
 }
 .name {
-    @include font(34px, 700, 39px);
-    letter-spacing: 0.04;
-    color: var(--title-text-color);
+    @include font(34px, 700, 39px);    
+    color: var(--title-text-color);  
     margin-bottom: 144px
     
 }
