@@ -216,6 +216,7 @@
     .title-cards {
         @include font(16px, 500, 30px);
         padding: 0 16px;
+        border-radius: 6px
 
     }
 
@@ -252,12 +253,12 @@
         padding: 50px 0 165px 0;
     }
     .overlay {
-        height: 500px;
+        // height: 500px;
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
     
-        background-image:
+        background-image: 
                             url(../images/backcround-images/ellipse-desktop.png);
     
         background-repeat: no-repeat;
