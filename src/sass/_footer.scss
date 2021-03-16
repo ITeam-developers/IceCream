@@ -3,6 +3,7 @@
     flex-direction: column;
     background: var(--secondary-background-color);
   }
+
   .footer-content {
     @media screen and (min-width: 768px) {
       display: flex;
@@ -136,7 +137,7 @@
   }
   .border-footer {
     position: absolute; 
-    top: 7039px;
+    top: 7068px;
     left: 0;
     width: 100%;
     border: 1px solid #e1e1e1;
@@ -144,7 +145,7 @@
       top: 4426px;
     }
     @media screen and (min-width: 1200px){
-    top: 4768px;
+    top: 5126px;
 }
   }
 
