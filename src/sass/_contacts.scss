@@ -118,7 +118,19 @@
     color: var(--gray-text-color);
 }
 .contacts-text {
-    margin-bottom: 25px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.contacts-text::after {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 0;
+    
+    height: 1px;
+    width: 100%;
+    
+    background: #E1E1E1;
 }
 
 .products-opening-hours {
@@ -127,29 +139,18 @@
 .contacts-schedule {
     position: relative;
     display: block;
-    padding: 25px 0;
-}
-.contacts-schedule::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    height: 1px;
-    width: 100%;
-    
-    background: var(--gray-text-color);
-
+    margin-bottom: 50px;
 }
 
 .contacts-schedule::after {
     position: absolute;
-    bottom: 0;
+    bottom: -25px;
     left: 0;
     content: "";
     height: 1px;
     width: 100%;
     
-    background: var(--gray-text-color);
+    background: #E1E1E1;
 
 }
 
@@ -228,24 +229,29 @@
     }
 
     .contacts-text {
-        margin-bottom: 30px;
+        margin-bottom: 60px;
         @include font(14px, 500, 23px);
     }
+    .contacts-text::after {
+        top: 100px;
+    }
+
 
     .contacts-schedule {
-       
-        padding: 30px 0;        
+        margin-bottom: 60px;
     }
+
+    .contacts-schedule::after {
+        bottom: -30px;
+    }
+
+
     .contacts-schedule-item+.contacts-schedule-item {
         margin-top: 30px;
     }
     .contacts-address-list {
         margin-top: 30px;
     }
-
-    // .contacts-address-item {   
-    //     @include font(14px, 500, 26px);
-    // }
 }
 
 
@@ -257,7 +263,16 @@
     }
     .contacts {
        
-        padding: 50px 0 165px 0;
+        padding-bottom: 165px;
+    }
+
+    .contacts-list {
+        position: static;
+        // top: 0;
+        margin-bottom: 86px;
+    }
+    .contacts-container {
+        padding-bottom: 0;
     }
     .overlay {
         // height: 500px;
@@ -295,14 +310,20 @@
     }
 
     .contacts-text {
-        margin-bottom: 32px;
+        margin-bottom: 64px;
         @include font(16px, 500, 29px);
+    }
+    .contacts-text::after {
+        top: 116px;
     }
 
     .contacts-schedule {
-       
-        padding: 32px 0;        
+        margin-bottom: 64px;
     }
+    .contacts-schedule::after {
+        bottom: -32px;
+    }
+    
     .contacts-schedule-item+.contacts-schedule-item {
         margin-top: 32px;
     }
