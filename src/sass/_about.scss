@@ -2,19 +2,7 @@
   background-color: var(--secondary-background-color);
   padding-top: 130px;
   padding-bottom: 39px;
-  @media screen and (min-width: 320px) {
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-image: url('../images/backcround-images/milkbg-mobail.png');
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192 dpi),
-      screen and (min-resolution: 2px) {
-      .text-second {
-        background-image: url('../images/backcround-images/milkbg-mobail@2x.png');
-      }
-    }
-  }
+
   @media screen and (min-width: 768px) {
     background-image: none;
   }
@@ -101,15 +89,17 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
-  // letter-spacing: 0.04em;
+  letter-spacing: 0.04em;
   color: var(--dark-text-color);
-  min-width: 220px;
-  padding: 0px 44px;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  //padding: 0px 44px;
   margin-top: 45px;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.76;
-    width: 340px;
+    width: 280px;
     margin-top: 0px;
     margin-left: 17px;
     padding: 0px;
@@ -127,31 +117,58 @@
   font-size: 12px;
   line-height: 1.62;
   color: var(--gray-text-color);
-  padding: 0px 44px;
+  //padding: 0px 44px;
   margin-top: 30px;
-  min-width: 220px;
-
+  width: 220px;
+  margin-right: auto;
+  margin-left: auto;
+//   @media screen and (min-width: 320px) {
+//     width: 100vh;
+//     //background-size: cover;
+//     //background-position: bottom;
+//     background-repeat: no-repeat;
+//     background-image: url('../images/backcround-images/milkbg-mobail.png');
+//     @media screen and (min-device-pixel-ratio: 2),
+//       screen and (min-resolution: 192 dpi),
+//       screen and (min-resolution: 2px) {
+//       .text-second {
+//         background-image: url('../images/backcround-images/milkbg-mobail@2x.png');
+//       }
+//     }
+//   }
+//  @media screen and (max-width: 767px) {
+//   //background-size: cover;
+//   background-image: url('../images/backcround-images/milkbg-mobail.png');
+//     @media screen and (min-device-pixel-ratio: 2),
+//       screen and (min-resolution: 192 dpi),
+//       screen and (min-resolution: 2px) {
+//       .text-second {
+//         background-image: url('../images/backcround-images/milkbg-mobail@2x.png');
+//       }
+//     }
+//   }
   @media screen and (min-width: 768px) {
-
+    background-image: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.76;
     letter-spacing: 0.04em;
-
-    max-width: 410px;
+    width: 340px;
     margin-left: 17px;
     padding: 0px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.94;
-    max-width: 463px;
+    min-width: 463px;
     margin-left: 74px;
   }
 }
 .paragraph {
+  display: block;
   margin-top: 20px;
-
+  margin-left: 0px;
+  background-image: none;
 }
 .btn-block {
   display: flex;
@@ -178,7 +195,7 @@
   width: 175px;
   height: 44px;
   border-radius: 22px;
-  padding: 12px 30px;
+  padding: 12px 35px;
   display: flex;
   align-items: center;
   justify-content: center;
