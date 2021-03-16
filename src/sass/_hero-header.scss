@@ -9,10 +9,19 @@ header {
 .header-hero {
   overflow: hidden;
   background-color: var(--ice-cream-color);
+  padding-top: 20px;
 
   @media screen and (max-width: 767px) {
     height: 100vh;
     min-height: 502px;
+  }
+
+  // @media screen and (max-width: 767px) {
+  //   padding-top: 20px;
+  // }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 36px;
   }
 }
 
@@ -48,14 +57,14 @@ header {
   }
 
   @media screen and (min-width: 768px) {
-    height: 399px;
+    height: 362px;
     // min-width: 768px;
     max-width: 768px;
    
   }
 
   @media screen and (min-width: 1200px) {
-    height: 665px;
+    height: 630px;
     min-width: 1200px;
     padding: 0px 115px;
   }
@@ -68,16 +77,14 @@ header {
 
   z-index: 999;
 
-  @media screen and (max-width: 767px) {
-    padding-top: 20px;
-  }
+  // @media screen and (max-width: 767px) {
+  //   padding-top: 20px;
+  // }
 
-  @media screen and (min-width: 768px) {
-    // align-items: baseline;
-    // justify-content: end;
-    // text-align: center;
-    padding-top: 36px;
-  }
+  // @media screen and (min-width: 768px) {
+   
+  //   padding-top: 36px;
+  // }
 
   @media screen and (min-width: 1200px) {
     // position: absolute;
@@ -97,7 +104,7 @@ header {
   @media screen and (min-width: 1200px) {
     position: absolute;
     left: -70px;
-    top: 37px;
+    top: 0px;
   }
 }
 
@@ -166,12 +173,18 @@ header {
     position: absolute;
     z-index: 999;
     left: 524px;
-    top: 48px;
+    top: 11px;
   }
 
   @media screen and (min-width: 1200px) {
     display: none;
   }
+
+  
+}
+
+.mobile-menu.is-open .btn-buy {
+  display: none;
 }
 
 .nav_list {
@@ -288,17 +301,25 @@ header {
       @include font(8px, 400, 12px);
       width: 114px;
       height: 48px;
-      margin-top: 67px;
+      // margin-top: 67px;
     }
 
     @media screen and (min-width: 1200px) {
       @include font(14px, 400, 20px);
       width: 200px;
       height: 78px;
-      margin-top: 112px;
+      // margin-top: 112px;
       // margin-left: 30px;
     }
   }
+}
+
+.headline-bottom-secondary{
+  margin-top: 67px;
+
+   @media screen and (min-width: 1200px) {
+    margin-top: 112px;
+   }
 }
 
 .run-to {
@@ -460,22 +481,23 @@ header {
   & .hero-icecream {
     position: absolute;
 
-    left: 117px;
+    // left: 117px;
+    right: 25px;
     bottom: 0px;
     z-index: 997;
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
-    left: 172px;
+     right: 140px;
     }
 
     @media screen and (min-width: 768px) {
       left: 386px;
-      top: 62px;
+      top: 25px;
     }
 
     @media screen and (min-width: 1200px) {
       left: 555px;
-      top: 108px;
+      top: 72px;
     }
   }
 
@@ -486,25 +508,26 @@ header {
     display: block;
     width: 346px;
     height: 344px;
-    left: 36px;
+    right: -68px;
+    // left: 36px;
     bottom: 80px;
     border-radius: 50%;
     background-color: var(--product-text-color);
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
-    left: 88px;
+    right: 50px;
     }
 
     @media screen and (min-width: 768px) {
       left: 299px;
-      top: 31px;
+      top: -6px;
       width: 324px;
       height: 322px;
     }
 
     @media screen and (min-width: 1200px) {
       left: 426px;
-      top: 52px;
+      top: 16px;
 
       width: 538px;
       height: 538px;
@@ -544,32 +567,30 @@ header {
 .headline-buttons {
   display: flex;
 
-  & .button-items-first {
-
-    width: 62px;
-    height: 24px;
-    padding: 7px 14px;
-    text-align: center;
-    align-items: center;
+  & .button-items{
     margin-top: 20px;
     margin-right: 8px;
+  }
 
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+  & .btn-hero{
+    padding: 7px 12px;
+    @include font(8px, 400, 10.42px);
 
+    border-radius: 20px;
+
+    @media screen and (min-width: 1200px) {
+      @include font(14px, 400, 18px);
+      padding: 12px 22px;
+    }
+  }
+
+  .buttons-first {
+    text-align: center;
+    align-items: center;
     cursor: pointer;
-
     color: var(--secondary-text-color);
     background-color: var(--title-text-color);
     transition: var(--time-animation);
-
-    @media screen and (min-width: 1200px) {
-      width: 104px;
-      height: 40px;
-      padding: 11px 10px;
-    }
 
     &:hover,
     :focus {
@@ -577,30 +598,14 @@ header {
     }
   }
 
-  & .button-items-second {
-    width: 82px;
-    height: 24px;
-    padding: 7px 10px;
+  & .buttons-second {
     text-align: center;
-    margin-top: 20px;
-
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    align-items: center;
 
     cursor: pointer;
-
     color: var(--title-text-color);
-
     background-color: var(--primary-background-color);
     transition: var(--time-animation);
-
-    @media screen and (min-width: 1200px) {
-      width: 138px;
-      height: 40px;
-      padding: 11px 10px;
-    }
 
     &:hover,
     :focus {
@@ -608,17 +613,10 @@ header {
     }
   }
 
-  & .buttons-link {
-    @include font(8px, 400, 10.42px);
-
-    @media screen and (min-width: 1200px) {
-      @include font(14px, 400, 18px);
-    }
-  }
 }
 
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   visibility: hidden;
   z-index: 1000;
   width: 100%;
@@ -627,6 +625,7 @@ header {
   // padding: 60px 22px;
 
   transform: translateX(100%);
+  // transform: translate(-50%, -50%);
 
   top: 0;
   right: 0;
@@ -647,6 +646,14 @@ header {
     visibility: visible;
     transform: translateX(0%);
   }
+
+  // &.is-open .menu_button{
+  //   display: none;
+  // }
+}
+
+.mobile-menu.is-open .menu_button{
+  display: none;
 }
 
 .mobile-btn-buy {
