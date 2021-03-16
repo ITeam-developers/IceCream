@@ -98,23 +98,19 @@
     background-color: #fea5bb;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-    &:hover,
-    &:focus {
-      background-color: var(--button-hover-primary);
-    }
   }
   .footer-social-list-icon {
-    fill: var(--primary-background-color);
+   fill: #fea5bb;
     width: 34px;
     height: 34px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    .social-list-link:hover &,
-    .social-list-link:focus & {
-      fill: var(--akcent-background);
-    }
   }
-  
+  .footer-social-list-link:hover .footer-social-list-icon, 
+  .footer-social-list-link:focus .footer-social-list-icon{
+    //background-color: #D41443;
+    fill: #D41443;
+
+  }
   .address-footer {
     margin-bottom: 68px;
     @include font(12px, 700, 22px);
