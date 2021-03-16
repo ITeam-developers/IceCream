@@ -7,6 +7,7 @@
     @media screen and (min-width: 768px) {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 120px;
     }
   }
   .footer-block {
@@ -114,6 +115,7 @@
   }
   
   .address-footer {
+    margin-bottom: 68px;
     @include font(12px, 700, 22px);
     display: block;
     font-family: var(--secondary-font);
@@ -122,6 +124,7 @@
     @media screen and (min-width: 768px) {
       @include font(14px, 700, 26px);
       display: flex;
+      
     }
     @media screen and (min-width: 1200px) {
       @include font(16px, 700, 30px);
@@ -132,14 +135,19 @@
     color: var(--title-text-color);
   }
   .border-footer {
+    position: absolute; 
+    top: 7039px;
+    left: 0;
+    width: 100%;
     border: 1px solid #e1e1e1;
-    margin-top: 43px;
-    margin-bottom: 22px;
     @media screen and (min-width: 768px) {
-      margin-top: 91px;
-      margin-bottom: 29px;
+      top: 4426px;
     }
+    @media screen and (min-width: 1200px){
+    top: 4768px;
+}
   }
+
   .footer-copyright {
     @include font(14px, 700, 21px);
     display: flex;
