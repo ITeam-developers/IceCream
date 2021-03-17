@@ -1,23 +1,14 @@
 <section class="header-hero">
-  <div class="header container">
+  <div class="header-container">
     <header>
       <div class="topline">
-        <a class="logo-header" href="">
-          <picture>
-            <source
-              srcset="
-                ./images/logo/logo-mobile.png    1x,
-                ./images/logo/logo-mobile@2x.png 2x
-              "
-            />
-            <img
-              class="logo"
-              src="./images/logo/logo-mobile.png"
-              alt=""
-              width="200"
-              height="50"
-            />
-          </picture>
+        <a class="logo-header" id="home" href="">
+          <img
+            class="logo"
+            alt="logotype"
+            src="./images/logo/logo-mobile.png"
+            srcset="./images/logo/logo-mobile@2x.png 2x"
+          />
         </a>
 
         <button type="button" class="menu_button" data-menu-button>
@@ -31,44 +22,86 @@
 
         <ul class="nav_list list">
           <li class="nav_item">
-            <a class="nav_link link" href="">Home</a>
+            <a class="nav_link link current" href="#home">Home</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link link" href="">About us</a>
+            <a class="nav_link link" href="#about">About us</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link link" href="">How it’s made?</a>
+            <a class="nav_link link" href="#h-i-m">How it’s made?</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link link" href="">Our products</a>
+            <a class="nav_link link" href="#products">Our products</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link link" href="">Contact</a>
+            <a class="nav_link link" href="#contacts">Contact</a>
           </li>
         </ul>
 
         <button type="button" class="btn-buy">
           Buy now
           <svg class="icon-buy" width="4px" height="8px">
-            <use href="./images/svg/sprite.svg#icon-chevron-right"></use>
+            <use href="./images/svg/sprite.svg#icon-vector"></use>
           </svg>
         </button>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <button type="button" class="btn_close" data-menu-close>
+          <svg class="icon-close" width="30" height="30">
+            <use
+              class="icon-close"
+              href="./images/svg/sprite.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
+
+        <button data-modal-open type="button" class="mobile-btn-buy">
+          Buy now
+          <svg class="icon-buy" width="4px" height="8px">
+            <use href="./images/svg/sprite.svg#icon-vector"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-nav_list list">
+          <li class="mobile-nav_item">
+            <a class="mobile-nav_link link current" href="#home">Home</a>
+          </li>
+          <li class="mobile-nav_item">
+            <a class="mobile-nav_link link" href="#about">About us</a>
+          </li>
+          <li class="mobile-nav_item">
+            <a class="mobile-nav_link link" href="#h-i-m">How it’s made?</a>
+          </li>
+          <li class="mobile-nav_item">
+            <a class="mobile-nav_link link" href="#products">Our products</a>
+          </li>
+          <li class="mobile-nav_item">
+            <a class="mobile-nav_link link" href="#contacts">Contact</a>
+          </li>
+        </ul>
       </div>
     </header>
 
     <div class="hero">
       <div class="box-left">
         <div class="headline">
-          <h1 class="headline-title">
+          <h1 class="headline-title animate__animated animate__bounceInDown">
             ice cream<br />made with <br />
             <span class="headline-title-secondary">passion</span>
           </h1>
-          <ul class="headline-buttons list">
-            <li class="button-items-first">
-              <a class="buttons-link link" href="">Products</a>
+          <ul
+            class="headline-buttons animate__animated animate__bounceInDown list"
+          >
+            <li class="button-items">
+              <a class="buttons-first btn-hero link" href="#products"
+                >Products</a
+              >
             </li>
-            <li class="button-items-second">
-              <a class="buttons-link link" href="">How it’s made?</a>
+            <li class="button-items">
+              <a class="buttons-second btn-hero link" href="#h-i-m"
+                >How it’s made?</a
+              >
             </li>
           </ul>
 
@@ -145,12 +178,12 @@
       </div>
       <div class="box-right">
         <ul class="points-list list">
-          <li>
+          <li class="first-list">
             <p class="points-item-qty">16</p>
             <p class="points-item">cafes</p>
           </li>
 
-          <li>
+          <li class="second-list">
             <p class="points-item-qty">23</p>
             <p class="points-item">food trucks</p>
           </li>
