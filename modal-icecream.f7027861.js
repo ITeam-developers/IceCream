@@ -117,17 +117,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../js/modal.js":[function(require,module,exports) {
+})({"../js/modal-icecream.js":[function(require,module,exports) {
 (function () {
   var refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]')
+    openModalBtn: document.querySelector('[data-modal-icecream-open]'),
+    closeModalBtn: document.querySelector('[data-modal-icecream-close]'),
+    modal: document.querySelector('[data-modal-icecream]')
   };
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  function toggleModal() {
+  function toggleModal(e) {
+    e.preventDefault();
     refs.modal.classList.toggle('is-hidden');
   }
 })();
@@ -335,5 +336,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/modal.js"], null)
-//# sourceMappingURL=/modal.a33100f4.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/modal-icecream.js"], null)
+//# sourceMappingURL=/modal-icecream.f7027861.js.map
